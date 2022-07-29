@@ -905,4 +905,6 @@ address {
 
   margin-left: auto;
   margin-right: auto;
+
+  user-select: none;
 }
