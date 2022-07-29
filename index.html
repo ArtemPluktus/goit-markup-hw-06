@@ -37,9 +37,9 @@
       </nav>
       <ul class="contact-list list">
         <li class="header-contact">
-          <a href="mailto:info@devstudio.com" class="header-contact-link link" h3 <svg width="16" height="12"
-            class="header-icon">
-            <use href="./images/icons.svg#mail"></use>
+          <a href="mailto:info@devstudio.com" class="header-contact-link link">
+            <svg width="16" height="12" class="header-icon">
+              <use href="./images/icons.svg#mail"></use>
             </svg>info@devstudio.com
           </a>
         </li>
@@ -417,16 +417,70 @@
           </li>
         </ul>
       </div>
+      <form class="footer-form">
+        <label class="footer-form-wrap">
+          <span class="footer-form-label">Подпишитесь на рассылку</span>
+          <input type="email" class="footer-form-input" name="e-mail" placeholder="E-mail">
+          <button type="submit" class="footer-form-btn">
+            <div class="footer-form-btn-wrap">Подписаться
+              <svg width="24" height="24" class="footer-form-icon">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </div>
+          </button>
+        </label>
+      </form>
     </div>
   </footer>
   <!-- Modal window -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-btn" data-modal-close>
+      <button class="modal-btn" type="button" data-modal-close>
         <svg width="11" height="11" class="modal-btn-icon">
           <use href="./images/icons.svg#xmark"></use>
         </svg>
       </button>
+      <form name="register-form" class="register-form">
+        <strong class="register-form-title">Оставьте свои данные, мы вам перезвоним</strong>
+        <div class="register-form-group" role="group">
+          <label class="register-form-wrap">
+            <span class="register-form-label">Имя</span>
+            <input type="text" class="register-form-input" name="user-name" required>
+            <svg width="18" height="18" class="register-form-icon">
+              <use href="./images/icons.svg#form-man"></use>
+            </svg>
+          </label>
+          <label class="register-form-wrap">
+            <span class="register-form-label">Телефон</span>
+            <input type="tel" class="register-form-input" name="user-tel" required>
+            <svg width="18" height="18" class="register-form-icon">
+              <use href="./images/icons.svg#form-tel"></use>
+            </svg>
+          </label>
+          <label class="register-form-wrap">
+            <span class="register-form-label">Почта</span>
+            <input type="email" class="register-form-input" name="user-mail" required>
+            <svg width="18" height="18" class="register-form-icon">
+              <use href="./images/icons.svg#form-mail"></use>
+            </svg>
+          </label>
+          <label class="register-form-wrap">
+            <span class="register-form-label">Комментарий</span>
+            <textarea class="register-form-message" name="response" rows="10" placeholder="Введите текст"></textarea>
+          </label>
+        </div>
+        <label class="register-form-agreement">
+          <input class="register-checkbox visually-hidden" type="checkbox" name="agreement" required>
+          <svg width="16" height="15" class="register-icon">
+            <use class="register-icon-uncheck" href="./images/icons.svg#uncheck"></use>
+            <use class="register-icon-check" href="./images/icons.svg#check"></use>
+          </svg>
+          <span class="register-form-agreement-text">Соглашаюсь с рассылкой и принимаю <a href=""
+              class="register-form-agreement-link">Условия
+              договора</a></span>
+        </label>
+        <button type="submit" class="register-form-btn">Отправить</button>
+      </form>
     </div>
   </div>
 

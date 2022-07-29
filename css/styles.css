@@ -515,6 +515,10 @@ address {
   color: var(--accent-txt-cl);
 }
 
+.footer-socials {
+  margin-right: 37px;
+}
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -581,6 +585,62 @@ address {
   background: var(--accent-txt-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.footer-form {
+  text-align: left;
+}
+
+.footer-form-label {
+  display: block;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--wh-txt-cl);
+  margin-bottom: 20px;
+}
+
+.footer-form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 15px 16px;
+  outline: transparent;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--dark-bg-cl);
+  margin-right: 8px;
+
+  color: var(--wh-txt-cl);
+}
+
+.footer-form-btn {
+  background-color: var(--accent-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 24px 10px 33px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--wh-txt-cl);
+  cursor: pointer;
+}
+
+.footer-form-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-form-icon {
+  fill: var(--wh-txt-cl);
 }
 
 /* Project */
@@ -674,7 +734,7 @@ address {
 .modal {
   position: relative;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: var(--wh-txt-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -683,6 +743,7 @@ address {
   transition-property: transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
+  padding: 40px;
 }
 
 .modal-btn {
@@ -699,6 +760,15 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition-property: fill;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--accent-txt-cl);
 }
 
 .backdrop.is-hidden {
@@ -713,4 +783,126 @@ address {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.register-form {
+  text-align: center;
+}
+
+.register-form-title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  color: var(--main-txt-cl);
+  margin-bottom: 12px;
+}
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.register-form-wrap:last-child {
+  margin-bottom: 0px;
+}
+
+.register-form-label {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--grey-txt-cl);
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.register-form-input,
+.register-form-message {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 11px 12px;
+  padding-left: 42px;
+  outline: transparent;
+  width: 448px;
+}
+
+.register-form-message {
+  padding-left: 16px;
+  resize: none;
+  height: 120px;
+}
+
+.register-form-input:focus,
+.register-form-message:focus {
+  border-color: var(--accent-txt-cl);
+}
+
+.register-form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+}
+
+.register-form-input:focus + .register-form-icon {
+  fill: var(--accent-txt-cl);
+}
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.register-form-agreement-text {
+  color: var(--grey-txt-cl);
+  user-select: none;
+}
+
+.register-form-agreement-link {
+  color: var(--accent-txt-cl);
+}
+
+.register-checkbox:checked + .register-icon .register-icon-uncheck {
+  opacity: 0;
+}
+
+.register-checkbox:checked + .register-icon .register-icon-check {
+  opacity: 1;
+}
+
+.register-icon-check {
+  opacity: 0;
+  transition: opacity var(--duration) var(--timing-function);
+}
+
+.register-form-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 55px;
+  cursor: pointer;
+  background-color: var(--accent-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--wh-txt-cl);
+
+  margin-left: auto;
+  margin-right: auto;
 }
