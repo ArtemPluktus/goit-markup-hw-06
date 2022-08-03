@@ -13,6 +13,7 @@
   /* Bg colors */
   --dark-bg-cl: #2f303a;
   --grey-bg-cl: #f5f4fa;
+  --accenr-bg-cl: #188ce8;
   /* Border */
   --border-cl: #ececec;
   --border-sec-cl: #eeeeee;
@@ -113,15 +114,14 @@ img {
   cursor: pointer;
   border: none;
 
-  transition-property: color, background-color;
+  transition-property: background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
 
 .btn:hover,
 .btn:focus {
-  color: var(--wh-txt-cl);
-  background-color: var(--accent-txt-cl);
+  background-color: var(--accenr-bg-cl);
 }
 
 .card-set {
@@ -724,8 +724,8 @@ address {
 
 .modal-btn {
   position: absolute;
-  top: 17px;
-  right: 17px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   padding: 0;
@@ -872,8 +872,13 @@ address {
   opacity: 1;
 }
 
-.register-checkbox:hover + .register-icon .register-icon-uncheck {
+.register-checkbox:hover + .register-icon .register-icon-uncheck,
+.register-checkbox:focus + .register-icon .register-icon-uncheck {
   fill: var(--accent-txt-cl);
+}
+
+.register-icon-uncheck {
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .register-icon-check {
